@@ -8,16 +8,20 @@ import {
   Flex,
   StyledSectionTitle,
   Card,
-  Background
+  Background,
+  StyledPic,
+  StyledText,
 } from "./elements";
 import Image from "next/image";
 import { text } from "../../pages/started";
+import NextLink from "next/link";
 
 export const Started = (startedProps) => {
   return (
-    <Background>
+    <>
       <StyledTitle>{startedProps.title}</StyledTitle>
       <StyledSubTitle>{startedProps.subtitle}</StyledSubTitle>
+      <Background>
       <Flex>
         <StyledImageContainer>
           <Image
@@ -31,14 +35,27 @@ export const Started = (startedProps) => {
         <StyledSection>
           {text.map((item, index) => (
             <Card key={index}>
-            <StyledSectionTitle>{item.title}</StyledSectionTitle>
-            <StyledSectionParagraph >
-              {item.text}
-            </StyledSectionParagraph>
+              <StyledPic>
+                {" "}
+                <Image
+                  src={item.icon}
+                  alt=""
+                  layout="fixed"
+                  width={item.icon.width}
+                  height={item.icon.height}
+                />
+              </StyledPic>
+              <StyledText>
+              <NextLink href="/">
+                <StyledSectionTitle>{item.title}</StyledSectionTitle>
+              </NextLink>
+              <StyledSectionParagraph>{item.text}</StyledSectionParagraph>
+              </StyledText>
             </Card>
           ))}
         </StyledSection>
       </Flex>
     </Background>
+    </>
   );
 };

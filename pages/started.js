@@ -1,5 +1,6 @@
 import React from "react";
 import { Started } from "../sections";
+import { FaBimobject, FaSearchengin, FaExternalLinkAlt } from "react-icons/fa";
 
 const startedProps = {
   title: "Managed agency selection",
@@ -11,15 +12,18 @@ const startedProps = {
 export const text = [
   {
     title: "Brief",
-    text: "Complete brief writing or simple guidance on what to include",
+    text: 'Complete brief writing or simple guidance on what to include',
+    icon: { src: "/img/b.png", alt: "", width: 64, height: 64 },
   },
   {
     title: "Search",
     text: "In-depth agency search covering; criteria matching, doorknocking ad due-diligence vetting",
+    icon: { src: "/img/s.png", alt: "", width: 64, height: 64 },
   },
   {
     title: "Pitch",
     text: "Comprehensive pitch management including comms , diary management and pitch hosting",
+    icon: { src: "/img/p.png", alt: "", width: 64, height: 64 },
   },
 ];
 

@@ -18,7 +18,7 @@ export const StyledSectionHeading = styled(forwardRef((props, ref) => <h2 {...pr
 
 export const StyledSectionSubheading = styled(forwardRef((props, ref) => <h3 {...props} ref={ref} />))`
   font-family: Poppins;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   line-height: 1.875rem;
   font-weight: 300;
 `;

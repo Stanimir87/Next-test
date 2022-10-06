@@ -43,6 +43,10 @@ export const StyledSection = styled((props) => <section {...props} />)`
   max-width: 32.03rem;
   max-height: 65rem;
   margin-left: 70px;
+
+  @media (max-width: 1024px) {
+    margin-left: 0px;
+  }
 `;
 
 export const StyledSectionParagraph = styled((props) => (

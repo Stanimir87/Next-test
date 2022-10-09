@@ -7,34 +7,33 @@ import {
   StyledSectionParagraph,
   Flex,
   StyledSectionTitle,
-  Card,
+  StyledCard,
   Background,
   StyledPic,
   StyledText,
 } from "./elements";
 import Image from "next/image";
-import { text } from "../../pages/started";
 import NextLink from "next/link";
 
-export const Started = (startedProps) => {
+export const Started = ({title, subtitle, image, text}) => {
   return (
     <>
-      <StyledTitle>{startedProps.title}</StyledTitle>
-      <StyledSubTitle>{startedProps.subtitle}</StyledSubTitle>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledSubTitle>{subtitle}</StyledSubTitle>
       <Background>
       <Flex>
         <StyledImageContainer>
           <Image
             layout="responsive"
-            src={startedProps.image.src}
-            alt={startedProps.image.alt}
-            width={startedProps.image.width}
-            height={startedProps.image.height}
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
           ></Image>
         </StyledImageContainer>
         <StyledSection>
           {text.map((item, index) => (
-            <Card key={index}>
+            <StyledCard key={index}>
               <StyledPic>
                 {" "}
                 <Image
@@ -47,11 +46,11 @@ export const Started = (startedProps) => {
               </StyledPic>
               <StyledText>
               <NextLink href="/">
-                <StyledSectionTitle>{item.title}</StyledSectionTitle>
+                <StyledSectionTitle>{item.cardTitle}</StyledSectionTitle>
               </NextLink>
               <StyledSectionParagraph>{item.text}</StyledSectionParagraph>
               </StyledText>
-            </Card>
+            </StyledCard>
           ))}
         </StyledSection>
       </Flex>

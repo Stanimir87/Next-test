@@ -11,18 +11,18 @@ const startedProps = {
 
 export const text = [
   {
-    title: "Brief",
-    text: 'Complete brief writing or simple guidance on what to include',
+    cardTitle: "Brief",
+    text: <>Complete <strong>brief writing or simple guidance </strong>on what to include, we&apos;ve got you covered</>,
     icon: { src: "/img/b.png", alt: "", width: 64, height: 64 },
   },
   {
-    title: "Search",
-    text: "In-depth agency search covering; criteria matching, doorknocking ad due-diligence vetting",
+    cardTitle: "Search",
+    text: <>In-depth agency search covering; <strong>criteria matching,</strong> doorknocking ad due-diligence vetting</>,
     icon: { src: "/img/s.png", alt: "", width: 64, height: 64 },
   },
   {
-    title: "Pitch",
-    text: "Comprehensive pitch management including comms , diary management and pitch hosting",
+    cardTitle: "Pitch",
+    text: <>Comprehensive <strong>pitch management</strong> including comms , diary management and pitch hosting</>,
     icon: { src: "/img/p.png", alt: "", width: 64, height: 64 },
   },
 ];
@@ -38,7 +38,7 @@ export default function started() {
           rel="stylesheet"
         />
       </head>
-      <Started {...startedProps}></Started>
+      <Started text={text} { ...startedProps}></Started>
     </>
   );
 }
